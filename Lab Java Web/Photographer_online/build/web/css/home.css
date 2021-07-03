@@ -1,0 +1,346 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 19, 2021, 07:52:35 AM
+    Author     : ADMIN
+*/
+html {
+    font-size: 16px;
+}
+
+body{
+    background-color: #ff0066;
+    background-image: url(../images/bg.png);
+    margin: 0;
+}
+.container {
+    margin: 0 auto;
+}
+
+.top {
+    width: 100%;
+    background-color: #333333;
+    height: 4rem;
+}
+
+.top ul {
+    list-style: none;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.top ul li {
+    border-right: solid white 1px; 
+    padding:1% 4%;
+}
+
+.top ul li:last-child {
+    border-right: none;
+}
+
+.top ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.down {
+    display: flex;
+    background-color: #990033;
+    padding: 1rem;
+}
+
+.down img{
+    display: none;
+}
+
+.down2 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.title{
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 3rem;
+    padding-top:  0.5rem;
+    padding-bottom: 0.3rem;
+}
+
+.subtitle {
+    color: white;
+}
+
+.main{
+    width: 90%;
+    display: flex;
+    padding-bottom: 0.5rem; 
+}
+.left{
+    width: 100%;
+    padding: 1.5rem 0;
+    padding-left: 2rem;
+
+}
+.left .image img{
+    width: 100%;
+    height: auto;
+}
+
+
+.description{
+    padding: 0.4rem;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: white;
+}
+.content{
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+
+
+.bigImg img{
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    border: 2px solid whitesmoke;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 59%;
+  width: auto;
+  padding: 1rem;
+  margin-top: -1.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 10%;
+  border-radius: 3px 0 0 3px;
+}
+
+.contentGalery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contentGalery img{
+    width: 100%;
+    height: auto;
+    border-radius: 0.35rem;
+
+}
+
+.contentGalery .subImg {
+    width: 20%;
+    background-color: white;
+    margin-top: 1.2rem;
+    margin-right: 1rem;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+}
+
+.subImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.galleryChild .image img {
+    width: 100%;
+    height: auto;
+}
+
+.galleryChild h4 {
+    margin: 0.3rem 0;
+}
+
+.galleryChild h4 a {
+    color: white;
+}
+
+.galleryChild p {
+    color: white;
+}
+
+.about{
+    color: #ffffff;
+    padding: 0.7rem 0;
+    margin: 0;
+    line-height: 2rem;
+    font-size: 1.8rem;
+}
+.about h3{
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.about-detail{
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 0.8rem 0 1.3rem 0;
+}
+
+.right {
+    display: none;
+}
+
+
+.footer {
+    height: 3rem;
+    background-color: #303030; 
+    padding: 1rem;
+}
+
+.footer a{
+    color: white;
+    font-size: 1rem;
+    float: left;
+}
+
+.footer .number {
+    float: right;
+    width: 1rem;
+    background: white;
+    border-radius: 0.25rem;
+    text-align: center;
+}
+
+.paging
+{
+    margin-top: 0.7rem;
+    text-align: center;
+}
+.paging a{
+    text-decoration: none;
+    padding: 0.2rem;
+    background-color: white;
+    border-radius: 0.4rem;
+}
+
+.country p {
+    color: white;        
+    padding-bottom: 0.8rem;
+}
+.content-contact h4{
+    font-size: 1.4rem;
+    line-height: 1.45rem;
+    color: white;
+}
+.infor table tr td{
+    padding-bottom: 0.8rem;
+    color: white;
+}
+.infor table tr td:last-child{
+    padding-left: 0.8rem;
+}
+.map img{
+    min-width: 500px;
+    max-width: 800px;
+    width: 100%;
+    height: 400px;
+}
+
+.content-contact{
+    margin-top: 1.4rem;
+}
+
+
+@media screen and (min-width: 800px) {
+    
+    .top {
+        height: 3rem;
+    }
+
+    .down img{
+        display: block;
+        width: 5.5rem;
+        height:5rem;
+        margin-left: 5rem;
+    }
+
+    .down2 {
+        margin-left: 3rem;
+    }
+
+    .left{
+        width: 70%;
+
+    }
+
+    .galleryChild {
+        width: 34%;
+        margin-left: 1.5rem;
+    }
+
+    .galleryChild:first-child {
+        margin-left: 0;
+    }
+
+    .right{
+        display: block;
+        padding: 1.5rem 1rem;
+        width: 30%;
+        height: auto;
+    }
+    .top-right{
+        background-color: #303030;
+        margin: 0;
+        padding: 0.5rem 1rem;
+    }
+
+    .top-right h4{
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+        color: white;
+        margin: 0;
+    }
+
+    .share{   
+        width: 100%;
+        background-color:#d97c7c;
+    }
+
+    .share ul{
+        margin: 0;
+        list-style: none;
+        padding: 1rem 1rem;
+    }
+
+    .share li a{
+        color: white;
+    }
+
+    .share img{
+        margin-top: 2px;
+        height: 1rem;
+        width: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .content {
+        display: flex;
+    }
+    
+    .prev, .next {
+        top: 68%;
+    }
+    
+    .next {
+        right: 38%;
+    }
+
+}

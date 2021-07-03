@@ -1,0 +1,104 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 14, 2021, 5:20:23 PM
+    Author     : ADMIN
+*/
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: darkgray;
+}
+
+.container {
+    width: 95%;
+    border-bottom: solid 0.2rem aqua;
+    margin-bottom: 1.2rem;
+}
+
+h2 {
+    margin: 1.6rem 20%;
+    width: 100%;
+}
+
+table {
+    width: 80%;
+}
+
+table tr td select{
+    width: 100%;
+}
+
+table tr td input {
+    width: auto;
+}
+
+table tr td:first-child{
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-right: 0.8rem;
+
+}
+
+#save {
+    background-color: aqua;
+    width: 5rem;
+    border-radius: 0.5rem;
+    margin: 1.6rem 35%;
+    height: 2rem;
+    font-weight: bold;
+    /*font-size: 1.2rem;*/
+
+}
+
+@media screen and (min-width: 400px) {
+    table tr td {
+        width: 60%;
+    }
+
+
+    table tr td:first-child{
+        width: 80%;
+        float: right;
+    }
+
+    table tr td select{
+        width: auto;
+    }
+    #save {
+        margin-left: 30%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    table tr td {
+        width: 60%;
+    }
+
+
+    table tr td:first-child{
+        width: 35%;
+        float: right;
+    }
+
+    table tr td select{
+        width: auto;
+    }
+
+    #save {
+        margin-left: 30%;
+    }
+    
+    h2 {
+    margin: 1.6rem 25%;
+}
+}
+
+
+

@@ -1,0 +1,83 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 13, 2021, 12:05:26 PM
+    Author     : ADMIN
+*/
+html {
+    font-size: 16px;
+}
+
+.from, .to, .search{ 
+    width: auto;
+    margin-right: 1rem;;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+form {
+    width: 100%;
+    border-bottom: solid 0.2rem aqua;
+    margin-bottom: 1.2rem;
+}
+
+
+h2 {
+    font-size: 2rem;
+    color: aqua;
+}
+
+form .head p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.search input {
+    border-radius: 0.4rem;
+    width: 5rem;
+    background-color: aqua;
+    font-weight: bold;
+    margin-right: 1.1rem;
+}
+
+.search a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: blue;
+}
+
+.content table{
+    width: 100%;
+    max-width: 880px;
+    min-width: 300px;
+    border: snow;
+    background-color: #cccccc;
+
+}
+
+table tr th {
+    height: 2rem;
+    font-size: 0.8rem;
+}
+
+table tr td {
+    height: 1.2rem;
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    table tr th {
+        font-size: 1.2rem;
+    }
+
+    table tr td {
+        font-size: 1rem;
+    }
+}
+
