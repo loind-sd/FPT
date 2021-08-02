@@ -1,0 +1,96 @@
+﻿body {
+}
+
+.login {
+    margin-left: 100px;
+}
+
+    .login #CheckBox1 {
+        margin-top: 10px;
+    }
+
+    .login #Label5 {
+        margin-left: 7%;
+        margin-bottom: 10px;
+    }
+
+.header {
+    margin-bottom: 20px;
+}
+
+.linkHeader {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.timeTable {
+    padding-left: 20px;
+}
+
+.user {
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.pass #txtPass {
+    margin-left: 3px;
+}
+
+.pass {
+    margin-bottom: 8px;
+}
+
+.login #Button1 {
+    margin-left: 7%;
+    width: 80px;
+    border-radius: 8px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    background: antiquewhite;
+}
+
+.calendar {
+    margin-bottom: 20px;
+}
+
+.table #gvTimeTable {
+    margin-top: 20px;
+    width: 442px;
+}
+
+.viewClass #Table1 {
+    border: medium ridge gray;
+    line-height: 37px;
+}
+
+.viewStudentInClass #GridView1, .takeAttendance #Table1, .viewClassToday #gvView {
+    width: 350px;
+    line-height: 30px;
+    text-align: center;
+    border: double;
+    border-color: gray;
+    margin-top: 20px;
+}
+
+.takeAttendance #Table1 {
+    width: 580px;
+}
+
+.takeAttendance #Button1 {
+    width: 72px;
+    background-color: antiquewhite;
+    border-radius: 6px;
+}
+
+th {
+    background-color: darkcyan;
+    color: white;
+    line-height: 30px;
+    
+}
+tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+td {
+    line-height: 25px;
+}

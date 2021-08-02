@@ -1,0 +1,7 @@
+C:\Users\ADMIN\source\repos\Project\Project\bin\Project.dll.config
+C:\Users\ADMIN\source\repos\Project\Project\bin\Project.dll
+C:\Users\ADMIN\source\repos\Project\Project\bin\Project.pdb
+C:\Users\ADMIN\source\repos\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Users\ADMIN\source\repos\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\Project\Project\obj\Debug\Project.dll
+C:\Users\ADMIN\source\repos\Project\Project\obj\Debug\Project.pdb
