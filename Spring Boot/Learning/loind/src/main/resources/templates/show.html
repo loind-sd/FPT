@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write a</div>
+
+        <ul>
+            <!--Duyệt qua toàn bộ phần tử trong biến "lodaProfile"-->
+            <li th:each="info : ${news.listResult}"> 
+                <!--Với mỗi phần tử, lấy ra key và value-->
+                <span th:text="*{info.id}"></span> : <span th:text="*{info.content}"></span>
+                <span><button><a th:href="@{/preNew(id=*{info.id})}" >Update</a></button></span>
+            </li>
+        </ul>
+    </body>
+</html>

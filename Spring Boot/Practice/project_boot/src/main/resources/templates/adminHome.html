@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+        
+        <form th:action="@{/preAdd}" method="post">
+            <input type="submit" value="Add"/>
+        </form>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Job</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Action</th>
+            
+            </tr>
+            <tr th:each="info : ${timetables}">
+                <td th:text="*{info.userFullname}" ></td>
+                <td th:each="i : *{info.userRoles}" >
+                    <span th:text="*{i.job}"></span></td>
+                <td th:text="*{info.timeTime}" ></td>
+                <td th:text="*{info.status == true} ? 'Done' : 'Not Yet'"></td>
+                <td>Edit</td>
+            </tr>
+        </table>
+    </body>
+</html>

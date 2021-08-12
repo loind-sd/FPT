@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Hello</title>
+    </head>
+    <body>
+        <h1>Chỉ những ai đăng nhập mới truy cập được trang này!</h1>
+
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+        
+        <h3>Hello <span th:text="${timetables.userFullname}" ></span></h3>
+
+        <!--<a th:href="@{/view(id=*{info.id})}">View Work today</a>-->
+
+        <ul>
+            <!--Duyệt qua toàn bộ phần tử trong biến "lodaProfile"-->
+            <li th:each="info : ${timetables}"> 
+                <!--Với mỗi phần tử, lấy ra key và value-->
+                <span th:text="*{info.userId}"></span> : <span th:text="*{info.date}"></span> 
+                : <span th:text="*{info.timeTime}"></span>
+                : <span th:text="*{info.status == true} ? 'Done' : 'Not Yet'"></span>
+                <span th:each="i : *{info.userRoles}" >
+                    <span th:text="*{i.job}"></span>
+                </span>
+                <!--<span><button><a th:href="@{/preNew(id=*{info.id})}" >Update</a></button></span>-->
+            </li>
+        </ul>
+
+        <!--<span th:text="${test}"></span>-->
+</html>
