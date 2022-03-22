@@ -28,19 +28,19 @@
                     <p class="notification"> ${message}&nbsp; </p>
                     <form action="register" method="POST">
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Nhập Email" name="txtEmail">
+                            <input type="email" class="form-control" placeholder="Nhập Email" name="txtEmail" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Nhập mật khẩu" name="txtPassword">
+                            <input type="password" class="form-control" placeholder="Nhập mật khẩu" name="txtPassword" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" name="txtPasswordConfirm">
+                            <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" name="txtPasswordConfirm" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Họ và tên" name="txtName">
+                            <input type="text" class="form-control" placeholder="Họ và tên" name="txtName" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Số điện thoại" name="txtMobile">
+                            <input type="text" class="form-control" placeholder="Số điện thoại" name="txtMobile" required>
                         </div>
                         <div class="form-group">
                             <textarea class="form-control" rows="2" placeholder="Địa chỉ" name="txtAddress"></textarea>
@@ -48,7 +48,7 @@
                         <div class="form-group">
                             <div class="col">
                                 <label class="custom-control custom-checkbox mr-4">
-                                    <input type="radio" class="custom-control-input" value="1" name="gender">
+                                    <input type="radio" class="custom-control-input" value="1" name="gender" checked>
                                     <span class="custom-control-indicator"></span>
                                     <span class="custom-control-description">Nam</span>
                                 </label>

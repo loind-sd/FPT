@@ -24,7 +24,7 @@
                         <th>Email</th>
                         <th>Loại</th>
                         <th>Trạng thái</th>
-                        <th>Chi tiết</th>
+                        <!--<th>Chi tiết</th>-->
                     </tr>
                 </thead>
                 <tbody>
@@ -32,7 +32,15 @@
                     <tr>
                         <td>${no.index+1}</td>
                         <td>${i.email}</td>
-                        <td>${i.roleId == 1 ? "Admin" : "Khách hàng"}</td>
+                        <c:if test="${i.roleId eq 1}">
+                            <td>Admin</td>
+                        </c:if>
+                        <c:if test="${i.roleId eq 2}">
+                            <td>Khách hàng</td>
+                        </c:if>
+                        <c:if test="${i.roleId eq 4}">
+                            <td>Người bán</td>
+                        </c:if>
                         <td>
                             <c:if test="${i.status == 1}">
                                 <span class="active">Đang hoạt động</span>
@@ -41,9 +49,9 @@
                                 <span class="deactive">Ngừng hoạt động</span>
                             </c:if>
                         </td>
-                        <td>
+<!--                        <td>
                             <a href="#" data-toggle="modal" data-target="#myModal" class="g-color">Chi tiết</a>
-                        </td>
+                        </td>-->
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -63,7 +71,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                ...
+                ... 
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-success btn-sm" data-dismiss="modal">Cập nhật thông tin</button>

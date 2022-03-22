@@ -17,7 +17,7 @@ import java.sql.SQLException;
  */
 public class MSSQLConnection {
 
-    public static final String HOSTNAME = "localhost";
+    public static final String HOSTNAME = "DESKTOP-GRCRLI1\\SQLEXPRESS";
     public static final String PORT = "1433";
     public static final String DBNAME = "baloshop";
     public static final String INTEGRATED_SECURITY = "false";

@@ -46,25 +46,36 @@ public class GetAccountOrders extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             HttpSession session = request.getSession();
             Account account = (Account) session.getAttribute("currentLoginAccount");
-            
+
             ArrayList<Order> listOrder = new OrderModel().getOrderById(account.getId());
-            
+
             String sOrderId = request.getParameter("id");
+            int flag = 0;
+            try {
+                flag = Integer.parseInt(request.getParameter("flag"));
+            } catch (Exception e) {
+                flag = 0;
+            }
             int orderId;
-            
+
             orderId = NumberUtil.getNumber(sOrderId, 0);
-            
-            if(orderId != 0){
+
+            if (orderId != 0) {
                 OtherAddress otherAddress = new OtherAddressModel().getOtherAddressByOrderId(orderId);
                 ArrayList<OrderDetail> listOrderDetail = new OrderDetailModel().getOrderDetailByOrderId(orderId);
                 request.setAttribute("addressDetail", otherAddress);
                 request.setAttribute("listOrderDetail", listOrderDetail);
-            }else{
+            } else {
                 System.out.println("Check!!!");
             }
-            
+
             request.setAttribute("listOrder", listOrder);
-            request.getRequestDispatcher("user-orders.jsp").forward(request, response);
+            
+            if (flag == 0) {
+                request.getRequestDispatcher("user-orders.jsp").forward(request, response);
+            } else if (flag == 1) {
+                request.getRequestDispatcher("redirectpage?page=4").forward(request, response);
+            }
         }
     }
 

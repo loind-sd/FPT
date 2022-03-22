@@ -64,17 +64,46 @@ public class RedirectPage extends HttpServlet {
                     request.getRequestDispatcher("admin-index.jsp").forward(request, response);
                     break;
                 case 3:
-                    ArrayList<Product> listProduct = new ProductModel().getAllProduct();
+                    ArrayList<Product> listProduct = null;
+                    
+                    if (account.getRoleId() == 1) {
+                        listProduct = new ProductModel().getAllProduct();
+                    } 
+                    else if (account.getRoleId() == 4) {
+                        listProduct = new ProductModel().getProductsBySeller(account.getId());
+                    }
+                    if(request.getParameter("idProduct") != null){
+                        Product p = new ProductModel().getOneProduct(Integer.valueOf(request.getParameter("idProduct")));
+                        request.setAttribute("productDetail", p);
+                    }
                     ArrayList<Category> listCategory = new CategoryModel().getAllCategory();
                     request.setAttribute("page", 3);
                     request.setAttribute("products", listProduct);
                     request.setAttribute("categories", listCategory);
                     request.getRequestDispatcher("admin-index.jsp").forward(request, response);
                     break;
+
                 case 4:
                     ArrayList<Order> listOrder = new OrderModel().getOrder();
+                    ArrayList<OrderDetail> listOrderDetail = null;
+                    try {
+                        listOrderDetail = (ArrayList<OrderDetail>) request.getAttribute("listOrderDetail");
+                    } catch (Exception e) {
+                    }
+                    if (account.getRoleId() == 4) {
+                        listOrder = new OrderModel().getOrderForSeller(account.getId());
+                    }
+                    request.setAttribute("listOrderDetail", listOrderDetail);
                     request.setAttribute("page", 4);
                     request.setAttribute("listOrder", listOrder);
+                    request.getRequestDispatcher("admin-index.jsp").forward(request, response);
+                    break;
+                    
+                case 5:
+                    ArrayList<Category> listCategoryy = new CategoryModel().getAllCategory();
+                    request.setAttribute("page", 5);
+//                    request.setAttribute("products", listProduct);
+                    request.setAttribute("categories", listCategoryy);
                     request.getRequestDispatcher("admin-index.jsp").forward(request, response);
                     break;
                 default:

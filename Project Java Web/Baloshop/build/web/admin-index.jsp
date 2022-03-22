@@ -21,11 +21,11 @@
     </head>
     <body>
         <%@include file="common/admin-nav.jsp"%>
-        
+
         <c:if test="${currentLoginAccount eq null}">
             <c:redirect url="login.jsp"/>
         </c:if>
-        
+
         <!-- Cover -->
         <div id="main-contain" class="container">
             <div class="row">
@@ -42,24 +42,41 @@
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item">
                                             <a class="nav-link" href="redirectpage?page=1">
-                                                <i class="mr-2"></i> Thông tin cá nhân
+                                                <i class="mr-2">Thông tin cá nhân</i> 
                                             </a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="redirectpage?page=2">
-                                                <i class="mr-2"></i> Quản lý tài khoản
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="redirectpage?page=3">
-                                                <i class="mr-2"></i> Quản lý sản phẩm
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="redirectpage?page=4">
-                                                <i class="mr-2"></i> Quản lý đơn hàng (coming soon)
-                                            </a>
-                                        </li>
+                                        <c:if test="${currentLoginAccount.roleId eq 1}">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="redirectpage?page=2">
+                                                    <i class="mr-2">Quản lý tài khoản</i> 
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="redirectpage?page=5">
+                                                    <i class="mr-2">Quản lý loại hàng</i>
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="redirectpage?page=4">
+                                                    <i class="mr-2">Quản lý đơn hàng</i> 
+                                                </a>
+                                            </li>
+                                        </c:if>
+
+                                        <c:if test="${currentLoginAccount.roleId eq 4}">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="redirectpage?page=3">
+                                                    <i class="mr-2">Sản phẩm của tôi</i> 
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="redirectpage?page=4">
+                                                    <i class="mr-2">Quản lý đơn hàng</i>
+                                                </a>
+                                            </li>
+                                        </c:if>
                                     </ul>
                                 </div>
                             </div>
@@ -78,6 +95,9 @@
                     </c:if>
                     <c:if test="${page == 4}">
                         <%@include file="admin-orders.jsp"%>
+                    </c:if>
+                    <c:if test="${page == 5}">
+                        <%@include file="admin-category.jsp"%>
                     </c:if>
                 </div>
             </div>
@@ -101,5 +121,22 @@
                 $('#orders').DataTable();
             });
         </script>
+
+        <c:if test="${listOrderDetail ne null}">
+            <script>
+                $(document).ready(function () {
+                    $('#myModal').modal('show');
+                });
+            </script>
+            <%@include file="user-modal-order-detail.jsp"%>
+        </c:if>
+        <c:if test="${productDetail ne null}">
+            <script>
+                $(document).ready(function () {
+                    $('#myModal').modal('show');
+                });
+            </script>
+            <%@include file="manageProduct_detail.jsp"%>
+        </c:if>
     </body>
 </html>
