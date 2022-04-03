@@ -11,7 +11,7 @@
 6. Đã trả lại hàng
 7. Đã hủy đơn hàng
 
-## Client
+## Buyer: có thể mua, xem, login, logout, thêm vào giỏ hàng, sửa giỏ hàng, thanh toán, ... nói chung là cũng kha khá đủ chức năng cơ bản
 
 ### 1. Thông tin tài khoản
 
