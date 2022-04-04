@@ -3,14 +3,12 @@ package com.loind.boot.practice.controller;
 import com.loind.boot.practice.model.Employee;
 import com.loind.boot.practice.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/v1/")
 public class EmployeeController {
 
@@ -20,5 +18,10 @@ public class EmployeeController {
     @GetMapping("/employees")
     public List<Employee> getAllEmployee() {
         return employeeRepository.findAll();
+    }
+
+    @PostMapping("/employees/add")
+    public Employee createEmployee(@RequestBody Employee e) {
+        return employeeRepository.save(e);
     }
 }
